@@ -35,7 +35,7 @@ The **PIC18Fxxx** series is a family of 8-bit microcontrollers by **Microchip Te
 | PIC18F4550   | 32KB  | 2KB  | Yes | USB HID/device support       |
 | PIC18F46K22  | 64KB  | 4KB  | No  | Low-power, enhanced features |
 
-> For datasheets and detailed specs, visit [Microchip's official site](https://www.microchip.com/en-us/products/microcontrollers-and-microprocessors/8-bit-mcus/pic-mcus/pic18f).
+> For datasheets and detailed specs, visit [Microchip's official site](https://www.microchip.com/en-us/product/pic18f4550).
 
 
 
