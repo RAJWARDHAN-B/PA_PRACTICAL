@@ -44,6 +44,8 @@ void main(void){
     // LATAbits.LATA2 = 0;
     // LATAbits.LATA3 = 1;
 
+    // REPLACE PORT BY LAT FOR INPUT SIMULATION
+
     // if (PORTAbits.RA0 == 1) {
     //     ch = 1;
     // }
