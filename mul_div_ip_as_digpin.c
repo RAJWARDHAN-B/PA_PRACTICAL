@@ -30,7 +30,7 @@ void main(void){
     LATAbits.LATA0 = 1;  // Simulate pressing button on RA0
     LATAbits.LATA1 = 0;  // No button press on RA1
 
-    PORTAbits.RA0 == 1;
+    // REPLACE THE PORTAbits.RA0 by LATAbits.LATA0 to simulate the user input as we don't have a switch connected
 
     if (PORTAbits.RA0 == 1) {
         ch = 1;  // Multiply
