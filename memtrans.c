@@ -1,6 +1,54 @@
 // MEMORY TRANSFER
 
 #include <xc.h>
+#include <string.h>  // Include string.h for memcpy and memmove
+
+#define _XTAL_FREQ 4000000
+#define ARR_SIZE 5
+
+int arr1[ARR_SIZE] = {1, 20, 3, 4, 5};
+int arr2[ARR_SIZE] = {6, 7, 8, 9, 10};
+int temp[ARR_SIZE], t[ARR_SIZE];
+int i;
+int choice = 1;
+
+void main(void) {
+    TRISD = 0x00;  // Set PORTD as output
+    PORTD = 0x00;  // Initialize PORTD
+
+    switch (choice) {
+        case 1:
+            memcpy(temp, arr1, ARR_SIZE * sizeof(int));  // Use memcpy
+            break;
+
+        case 2:
+            memmove(t, arr1, ARR_SIZE * sizeof(int));  // Use memmove
+            break;
+
+        case 3:
+            for (i = 0; i < ARR_SIZE; i++) {
+                int swapTemp = arr1[i];
+                arr1[i] = arr2[i];
+                arr2[i] = swapTemp;
+            }
+            break;
+
+        default:
+            break;
+    }
+
+    for (i = 0; i < ARR_SIZE; i++) {
+        PORTD = arr1[i] & 0xFF;  // Mask to ensure it's within 8 bits
+        __delay_ms(100);  // Add delay between each value
+    }
+
+    while(1);
+}
+
+
+/*
+
+#include <xc.h>
 #define _XTAL_FREQ 4000000
 
 int arr1[5] = {1, 2, 3, 4, 5};
@@ -67,3 +115,6 @@ void main(void) {
 
     while(1);
 }
+
+
+*/
