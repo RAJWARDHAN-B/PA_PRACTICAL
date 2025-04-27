@@ -14,13 +14,23 @@ int a=8,b=4,c;
 int ch=1;
 
 void main(void){
-    TRISA = 0xFF;   // PORTA as Input (even if we simulate)
-    TRISD = 0x00;   // PORTD as Output
+    TRISA = 0xFF;  // PORTA as Input (even if we simulate)
+    TRISD = 0x00;  // PORTD as Output
     PORTD = 0x00;
+
+    // IF WE HAVE TO TAKE INPUT FROM THE USER
+    // TRISB = 0xFF;
+    // TRISC = 0xFF;
+    // LATB = 8;
+    // LATC = 4;
+    // a = LATB;
+    // b = LATC;
 
     // Simulate digital inputs
     LATAbits.LATA0 = 1;  // Simulate pressing button on RA0
     LATAbits.LATA1 = 0;  // No button press on RA1
+
+    PORTAbits.RA0 == 1
 
     if (PORTAbits.RA0 == 1) {
         ch = 1;  // Multiply
